@@ -25,8 +25,10 @@ SECRET_KEY = 'django-insecure-$h4(k3_x2yofgftqq#s9u766uj$o5k#rm=@sry4z(f%cb0*vxw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['www.thenourishacres.com']
-
+# ALLOWED_HOSTS = ['127.0.0.1' , 'www.thenourishacres.com']
+ALLOWED_HOSTS = [
+    h for h in os.getenv('ALLOWED_HOSTS', '').split(",") if h
+]
 
 # Application definition
 

@@ -11,3 +11,5 @@ venv/
 # Database files
 *.sqlite3
 *.db
+
+PrivateREADME.md
